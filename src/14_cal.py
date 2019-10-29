@@ -29,7 +29,7 @@ cal = calendar.TextCalendar(firstweekday=0)
 if len(sys.argv) > 3:
     print('Please provide input in the format of "14_cal.py [month] [year]".\nMonth needs to be between 1 and 12.\nYear is optional')
 else:
-    if len(sys.argv) == 0:
+    if len(sys.argv) == 1:          #forgot that the input will have at least length of 1
         print(cal.formatmonth(today.year, today.month))
     elif len(sys.argv) > 1:
         month = int(sys.argv[1])
